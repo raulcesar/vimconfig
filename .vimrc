@@ -1,3 +1,6 @@
+"Special installation for:
+"Valloric / YouCompleteMe
+"marijnh / tern_for_vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax enable
@@ -30,7 +33,10 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
-
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim'
+Bundle 'wincent/Command-T'
+Bundle 'scrooloose/nerdtree'
 " This does what it says on the tin. It will check your file on open too, not
 " just on save.
 " " You might not want this, so just leave it out if you don't.
@@ -44,7 +50,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'L9'
 " Plugin 'FuzzyFinder'
 " scripts not on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " ...
@@ -67,4 +73,8 @@ if has("gui_running")
 elseif &t_Co == 256
     colorscheme codeschool 
 endif
+autocmd vimenter * if !argc() | NERDTree | endif
 
+
+imap <C-i> <CR><Esc>O
+nmap <C-p> "+p
