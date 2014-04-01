@@ -72,5 +72,8 @@ if has("gui_running")
 elseif &t_Co == 256
     colorscheme codeschool 
 endif
+autocmd vimenter * if !argc() | NERDTree | endif
+
+
 imap <C-i> <CR><Esc>O
 nmap <C-p> "+p
