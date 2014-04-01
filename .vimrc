@@ -35,6 +35,7 @@ Bundle 'scrooloose/syntastic'
 " just on save.
 " " You might not want this, so just leave it out if you don't.
 let g:syntastic_check_on_open=1
+let g:syntastic_javascript_jshint_conf="~/vimconfig/.jshintrc"
 "
 " " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
