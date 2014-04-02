@@ -41,7 +41,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
-Bundle 'amiorin/vim-project'
+Bundle 'vimplugin/project.vim'
 " Snippet engine.
 Bundle 'SirVer/ultisnips'
 
@@ -113,11 +113,11 @@ map <C-l> <C-w>l
 cmap w!! w !sudo tee % >/dev/null
 
 " Configuration for Project plugin
-let g:project_use_nerdtree = 1
-set rtp+=~/.vim/bundle/vim-project/
-call project#rc("~/DevProjects")
+" let g:project_use_nerdtree = 1
+" set rtp+=~/.vim/bundle/vim-project/
+" call project#rc("~/DevProjects")
 
-Project 'nodeLearning/restserver', 'restserver'
-Project 'nodeLearning/code/web-services', 'example-rest'
-Project 'Node/nodecedi', 'cedi@home'
-Project '~/vimconfig'
+" Project 'nodeLearning/restserver', 'restserver'
+" Project 'nodeLearning/code/web-services', 'example-rest'
+" Project 'Node/nodecedi', 'cedi@home'
+" Project '~/vimconfig'
