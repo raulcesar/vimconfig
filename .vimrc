@@ -41,6 +41,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
+Bundle 'amiorin/vim-project'
 " This does what it says on the tin. It will check your file on open too, not
 " just on save.
 " " You might not want this, so just leave it out if you don't.
@@ -77,10 +78,13 @@ if has("gui_running")
 elseif &t_Co == 256
     colorscheme distinguished
 endif
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * if !argc() | NERDTree | endif
+" configuration for ycm plugin
+let g:ycm_server_use_vim_stdout=1
+
 
 let mapleader=","
-imap <C-i> <CR><Esc>O
+imap <C-c> <CR><Esc>O
 nmap <C-p> "+p
 nmap <left> :NERDTreeToggle<CR>
 nmap <silent><leader>h :set hlsearch !<CR>
@@ -91,3 +95,12 @@ map <C-l> <C-w>l
 
 " for when we open without sudo, and then need to write file1!!
 cmap w!! w !sudo tee % >/dev/null
+
+" Configuration for Project plugin
+let g:project_use_nerdtree = 1
+set rtp+=~/.vim/bundle/vim-project/
+call project#rc("~/DevProjects")
+
+Project 'nodeLearning/restserver', 'restserver'
+Project 'nodeLearning/code/web-services', 'example-rest'
+
