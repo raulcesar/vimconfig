@@ -42,6 +42,20 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'amiorin/vim-project'
+" Snippet engine.
+Bundle 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Bundle 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<leader>s"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="horizontal"
+let g:UltiSnipsListSnippets="<leader><tab>"
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
 " This does what it says on the tin. It will check your file on open too, not
 " just on save.
 " " You might not want this, so just leave it out if you don't.
@@ -79,6 +93,8 @@ elseif &t_Co == 256
     colorscheme distinguished
 endif
 " autocmd vimenter * if !argc() | NERDTree | endif
+
+
 " configuration for ycm plugin
 let g:ycm_server_use_vim_stdout=1
 
