@@ -9,6 +9,10 @@ set smartindent
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set smartcase
+set hlsearch
+set nobackup
+set incsearch
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -71,10 +75,16 @@ filetype plugin indent on     " required
 if has("gui_running")
     colorscheme wombat
 elseif &t_Co == 256
-    colorscheme codeschool 
+    colorscheme distinguished
 endif
 autocmd vimenter * if !argc() | NERDTree | endif
 
-
+let mapleader=","
 imap <C-i> <CR><Esc>O
 nmap <C-p> "+p
+nmap <left> :NERDTreeToggle<CR>
+nmap <silent><leader>h :set hlsearch !<CR>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l

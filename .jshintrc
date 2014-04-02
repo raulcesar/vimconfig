@@ -2,5 +2,7 @@
     "jquery":true,
     "browser":true,
     "devel":true,
-    "globalstrict":true
+    "globalstrict":true,
+    "node":true
+
 }
