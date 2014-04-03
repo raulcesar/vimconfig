@@ -61,6 +61,9 @@ let g:UltiSnipsListSnippets="<leader><tab>"
 " " You might not want this, so just leave it out if you don't.
 let g:syntastic_check_on_open=1
 " let g:syntastic_javascript_jshint_conf="~/vimconfig/.jshintrc"
+
+let g:proj_run1='!npm start'
+let g:proj_run2='!npm stop'
 "
 " " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
