@@ -12,6 +12,7 @@ set expandtab
 set smartcase
 set hlsearch
 set nobackup
+set noswapfile
 set incsearch
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
